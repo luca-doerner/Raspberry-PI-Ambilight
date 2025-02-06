@@ -23,4 +23,4 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           ANSIBLE_HOST_KEY_CHECKING: "False"
         run: |
-          ansible-playbook -i deploy/inventory.ini deploy/ansible.yml --extra-vars "ansible_ssh_pass=$SSH_PASSWORD ansible_become_password=$SSH_PASSWORD"
+          ansible-playbook -i deploy/inventory.ini deploy/ansible.yml --extra-vars "SSH_PASSWORD=$SSH_PASSWORD SSH_PASSWORD=$SSH_PASSWORD"
