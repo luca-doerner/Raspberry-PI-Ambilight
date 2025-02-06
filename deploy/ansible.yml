@@ -1,5 +1,5 @@
 - name: Deploy Application
-  hosts: all
+  hosts: raspberrypi
   become: yes
   tasks:
     - name: Update packages
