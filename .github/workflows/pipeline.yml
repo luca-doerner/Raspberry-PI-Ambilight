@@ -19,9 +19,9 @@ jobs:
       - name: Run Ansible Playbook
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-          SSH_USER: ${{ variables.SSH_PASSWORD }}
-          SERVER_IP: ${{ variables.SSH_PASSWORD }}
+          SSH_USER: ${{ vars.SSH_PASSWORD }}
+          SERVER_IP: ${{ vars.SSH_PASSWORD }}
           ANSIBLE_HOST_KEY_CHECKING: "False"
         run: |
-          echo "Key: $SSH_User $SERVER_IP"
+          echo "Key: $SSH_USER $SERVER_IP"
           ansible-playbook -i deploy/inventory.ini deploy/ansible.yml --extra-vars "ansible_ssh_pass=$SSH_PASSWORD ansible_host=$SERVER_IP ansible_user=$SSH_USER"
