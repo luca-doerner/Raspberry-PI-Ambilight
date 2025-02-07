@@ -19,8 +19,6 @@ jobs:
       - name: Run Ansible Playbook
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SERVER_IP: ${{ secrets.SERVER_IP }}
           ANSIBLE_HOST_KEY_CHECKING: "False"
         run: |
           echo "Key: $SSH_PASSWORD"
