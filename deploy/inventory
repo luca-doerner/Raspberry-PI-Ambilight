@@ -1,0 +1,2 @@
+[all]
+raspberrypi ansible_host=79.207.204.139 ansible_user=luca ansible_ssh_pass=ZwYhMp123321!!! ansible_become_password=ZwYhMp123321!!! ansible_port=22
