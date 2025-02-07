@@ -2,7 +2,8 @@
   hosts: raspberrypi
   become: yes
   tasks:
-    - name: Update packages
-      apt:
-        update_cache: yes
-        upgrade: yes
+    - name: Create Moin Directory
+      file:
+        path: /home/moin
+        state: directory
+        mode: '0755'
