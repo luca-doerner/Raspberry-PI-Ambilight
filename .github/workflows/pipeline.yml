@@ -24,4 +24,4 @@ jobs:
           ANSIBLE_HOST_KEY_CHECKING: "False"
         run: |
           echo "Key: $SSH_PASSWORD"
-          ansible-playbook -i deploy/inventory.ini deploy/ansible.yml
+          ansible-playbook -i deploy/inventory.ini deploy/ansible.yml --extra-vars "ansible_ssh_pass=$SSH_PASSWORD"
