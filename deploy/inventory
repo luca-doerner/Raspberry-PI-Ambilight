@@ -1,2 +1,2 @@
 [all]
-raspberrypi ansible_host=79.207.204.139 ansible_user=luca ansible_ssh_pass=ZwYhMp123321!!! ansible_become_password=ZwYhMp123321!!! ansible_port=22
+raspberrypi ansible_host=79.207.204.139 ansible_user=luca ansible_ssh_pass=${SSH_PASSWORD} ansible_become_password=${SSH_PASSWORD} ansible_port=22
