@@ -35,6 +35,7 @@ public class Ambilight implements CommandLineRunner {
                 .bus(SpiBus.BUS_0)
                 .mode(SpiMode.MODE_0)
                 .baud(3200000) // Adjust based on your strip
+                .address(0x00)
                 .build());
 
         byte[] ledData = new byte[30 * 3]; // 30 LEDs, 3 bytes each (RGB)
