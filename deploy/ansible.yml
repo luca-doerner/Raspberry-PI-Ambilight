@@ -5,6 +5,6 @@
     - name: Deploy built application
       copy:
         src: ../target/Ambilight-1.0.0.jar
-        dest: /home/luca/Ambilight
+        dest: /home/luca/Ambilight/
         owner: luca
         group: luca
