@@ -15,7 +15,7 @@ jobs:
 
       - name: Build Application
         run: |
-          apk add maven
+          sudo apt-get install maven
           mvn clean
           mvn package
 
