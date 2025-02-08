@@ -2,8 +2,9 @@
   hosts: raspberrypi
   become: yes
   tasks:
-    - name: Create Moin Directory
-      file:
-        path: /home/moin
-        state: directory
-        mode: '0755'
+    - name: Deploy built application
+      copy:
+        src: ../target/Ambilight-1.0.0.jar
+        dest: /home/luca/Ambilight
+        owner: luca
+        group: luca
