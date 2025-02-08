@@ -6,8 +6,28 @@ import com.pi4j.io.spi.Spi;
 import com.pi4j.io.spi.SpiBus;
 import com.pi4j.io.spi.SpiMode;
 
-public class Ambilight {
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Ambilight implements CommandLineRunner {
+
     public static void main(String[] args) {
+        SpringApplication.run(Ambilight.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Your logic for controlling WS2812 LEDs goes here
+        System.out.println("Starting WS2812 LED control...");
+
+        // Initialize and control your WS2812 strip here
+        // This part will be similar to the code you already wrote for controlling the LEDs
+        controlLEDs();
+    }
+
+    private void controlLEDs() {
         Context pi4j = Pi4J.newAutoContext();
 
         Spi spi = pi4j.create(Spi.newConfigBuilder(pi4j)
@@ -27,5 +47,7 @@ public class Ambilight {
 
         spi.write(ledData);
         pi4j.shutdown();
+
+        System.out.println("All LEDs are now on!");
     }
 }
