@@ -47,7 +47,6 @@ public class Ambilight implements CommandLineRunner {
         }
 
         spi.write(ledData);
-        pi4j.shutdown();
 
         System.out.println("All LEDs are now on!");
     }
